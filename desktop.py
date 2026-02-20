@@ -48,28 +48,32 @@ def on_motion(event):
     mouse.goto(tx, ty)
     screen.update()
 
-ui.goto(0, h)
-ui.setheading(90)
-pts = [ui.position()]
-ui.pencolor("#000000")
-ui.fillcolor("#ff0000")
-ui.begin_fill()
-ui.pendown()
-ui.forward(w / 5)
-ui.left(90)
-ui.forward(h / 5)
-ui.left(90)
-ui.forward(w / 5)
-ui.left(90)
-ui.forward(h / 5)
-ui.end_fill()
-xs = [p[0] for p in pts]
-ys = [p[1] for p in pts]
-cx = (min(xs) + max(xs)) / 2
-cy = (min(ys) + max(ys)) / 2
-ui.penup()
-ui.goto(cx, cy - 8)
-ui.write("电源选项", align="center", font=("Arial", 16, "normal"))
+def ui_setup(x, y, pencolor, fillcolor, text, weight, height):
+    global w, h
+    ui.goto(x, y)
+    ui.setheading(90)
+    pts = [ui.position()]
+    ui.pencolor(pencolor)
+    ui.fillcolor(fillcolor)
+    ui.begin_fill()
+    ui.pendown()
+    ui.forward(weight)
+    ui.left(90)
+    ui.forward(height)
+    ui.left(90)
+    ui.forward(weight)
+    ui.left(90)
+    ui.forward(height)
+    ui.end_fill()
+    xs = [p[0] for p in pts]
+    ys = [p[1] for p in pts]
+    cx = (min(xs) + max(xs)) / 2
+    cy = (min(ys) + max(ys)) / 2
+    ui.penup()
+    ui.goto(cx, cy - 8)
+    ui.write(text, align="center", font=("Arial", 16, "normal"))
+
+ui_setup(0, h, "black", "red", "电源选项", w / 5, h / 5)
 
 canvas.bind("<Motion>", on_motion)
 
