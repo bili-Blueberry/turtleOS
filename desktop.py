@@ -51,6 +51,8 @@ def on_motion(event):
 ui.goto(0, h)
 ui.setheading(90)
 pts = [ui.position()]
+ui.pencolor("#000000")
+ui.fillcolor("#ff0000")
 ui.begin_fill()
 ui.pendown()
 ui.forward(w / 5)
