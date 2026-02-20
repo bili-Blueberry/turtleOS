@@ -73,3 +73,5 @@ def ui_setup(x, y, pencolor, fillcolor, text, weight, height):
     ui.goto(cx, cy - 8)
     ui.write(text, align="center", font=("Arial", 16, "normal"))
 
+def exit_fullscreen(event=None):
+    root.attributes("-fullscreen", False)
