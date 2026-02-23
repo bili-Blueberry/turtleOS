@@ -4,8 +4,8 @@ import os
 ui.ui.penup()
 ui.ui.goto(ui.w, ui.h)
 ui.ui.pendown()
-if os.path.exists("wallpaper.gif"):
-    ui.ui.bgpic("wallpaper.gif")
+if os.path.exists("wallpaper.png"):
+    ui.ui.bgpic("wallpaper.png")
 ui.ui.penup()
 ui.ui.goto(0, 0)
 
