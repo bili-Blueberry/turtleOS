@@ -13,7 +13,7 @@ Make UI with Turtle
 ```Python
 import ui
 exit_fullscreen() # 退出全屏
-ui.ui_setup(0, ui.h, "black", "red", "电源选项", ui.w / 5, ui.h / 5) # 在窗口左下角创建一个黑色边框的红色按钮“电源选项”
+ui.button(0, ui.h, "black", "red", "电源选项", ui.w / 5, ui.h / 5) # 在窗口左下角创建一个黑色边框的红色按钮“电源选项”
 ui.canvas.bind("<Motion>", ui.on_motion)
 turtle.mainloop()
 ```

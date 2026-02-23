@@ -48,7 +48,7 @@ def on_motion(event):
     mouse.goto(tx, ty)
     screen.update()
 
-def ui_setup(x, y, pencolor, fillcolor, text, weight, height):
+def button(x, y, pencolor, fillcolor, text, weight, height):
     global w, h
     ui.goto(x, y)
     ui.setheading(90)
@@ -72,6 +72,17 @@ def ui_setup(x, y, pencolor, fillcolor, text, weight, height):
     ui.penup()
     ui.goto(cx, cy - 8)
     ui.write(text, align="center", font=("Arial", 16, "normal"))
+
+def text(x, y, pencolor, text, size):
+    ui.goto(x, y)
+    xs = [p[0] for p in pts]
+    ys = [p[1] for p in pts]
+    cx = (min(xs) + max(xs)) / 2
+    cy = (min(ys) + max(ys)) / 2
+    ui.penup()
+    ui.goto(cx, cy - 8)
+    ui.pencolor(pencolor)
+    ui.write(text, align="center", font=("Arial", size, "normal"))
 
 def exit_fullscreen(event=None):
     root.attributes("-fullscreen", False)
