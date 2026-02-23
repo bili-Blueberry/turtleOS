@@ -1,4 +1,3 @@
-import turtle
 import os
 import ui
 

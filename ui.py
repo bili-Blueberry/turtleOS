@@ -86,3 +86,4 @@ def text(x, y, pencolor, text, size):
 
 def exit_fullscreen(event=None):
     root.attributes("-fullscreen", False)
+
