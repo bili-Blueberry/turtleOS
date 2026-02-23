@@ -1,6 +1,14 @@
 import ui
 import os
 
+ui.ui.penup()
+ui.ui.goto(ui.w, ui.h)
+ui.ui.pendown()
+if os.path.exists("wallpaper.gif"):
+    ui.ui.bgpic("wallpaper.gif")
+ui.ui.penup()
+ui.ui.goto(0, 0)
+
 ui.button(0, ui.h / 5, "white", "blue", "文件管理", ui.w / 5, ui.h / 5)
 ui.button(0, ui.h / 5 * 2, "white", "green", "壁纸", ui.w / 5, ui.h / 5)
 ui.button(0, ui.h / 5 * 3, "white", "gray", "设置", ui.w / 5, ui.h / 5)
