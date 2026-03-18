@@ -5,6 +5,8 @@ A OS with Python Turtle
 
 功能不完善，见谅。
 
+没做完呢。
+
 # UI.py
 Make UI with Turtle
 
